@@ -24,7 +24,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btnSearchClick(Sender: TObject);
   private
-    { Private �錾 }
+    { Private éŒ¾ }
     procedure Extract(SearchOnly: Boolean);
     procedure InitStartAddress;
     function GetROMSize: Integer;
@@ -32,7 +32,7 @@ type
     property ROMSize: Integer read GetROMSize;
     property StateSaveFile: string read GetStateSaveFile;
   public
-    { Public �錾 }
+    { Public éŒ¾ }
   end;
 
 var
@@ -116,7 +116,7 @@ begin
     Read(FR, CB);
     if WriteFlg then
     begin
-      BlockWrite(FW, CB, 1);
+      Write(FW, CB);
       Inc(NumOfWrite);
       if NumOfWrite >= ROMSize then
         break;
